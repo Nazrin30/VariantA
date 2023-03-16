@@ -8,5 +8,9 @@
         android:id="@+id/productDetailFragment2"
         android:name="com.example.varianta.ProductDetailFragment"
         android:label="fragment_product_detail"
-        tools:layout="@layout/fragment_product_detail" />
+        tools:layout="@layout/fragment_product_detail" >
+        <argument
+            android:name="product"
+            app:argType="com.example.varianta.Products" />
+    </fragment>
 </navigation>

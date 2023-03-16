@@ -37,7 +37,7 @@
         android:label="fragment_products"
         tools:layout="@layout/fragment_products" >
         <action
-            android:id="@+id/action_productsFragment2_to_product_nav_graph"
+            android:id="@+id/toProductDetails"
             app:destination="@id/product_nav_graph" />
     </fragment>
 </navigation>

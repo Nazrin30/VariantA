@@ -1,10 +1,12 @@
 package com.example.varianta
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.varianta.databinding.CardDesignBinding
@@ -24,12 +26,13 @@ class Adapter ( var mContext: Context, var list : List<Products>)
         val product = list.get(position)
         holder.binding.textView3.text = product.name
         holder.binding.imageView.setImageResource(mContext.resources.getIdentifier(product.image, "drawable", mContext.packageName))
+        val bundle = Bundle()
+        bundle.apply{
+            putSerializable("product", product)
+        }
         holder.binding.detailsButton.setOnClickListener {
-            val bundle = Bundle()
-            bundle.apply {
-                putSerializable("product", product)
-            }
-            Navigation.findNavController(it).navigate(R.id.action_productsFragment2_to_product_nav_graph, bundle)
+
+            findNavController(it).navigate(R.id.product_nav_graph, bundle)
         }
 
     }
