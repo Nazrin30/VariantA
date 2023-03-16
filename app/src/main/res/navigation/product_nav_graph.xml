@@ -3,11 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/product_nav_graph"
-    app:startDestination="@id/products">
-
+    app:startDestination="@id/productDetailFragment2">
     <fragment
-        android:id="@+id/products"
-        android:name="com.example.varianta.ProductsFragment"
-        android:label="fragment_products"
-        tools:layout="@layout/fragment_products" />
+        android:id="@+id/productDetailFragment2"
+        android:name="com.example.varianta.ProductDetailFragment"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail" />
 </navigation>
