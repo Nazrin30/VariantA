@@ -19,11 +19,11 @@ class ProductsFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentProductsBinding.inflate(layoutInflater, container, false)
 
-         var product  = Products("Mocha",
+         val product  = Products("Mocha",
              "caffè mocha is based on espresso and hot milk but with added chocolate flavouring and sweetener, typically in the form of cocoa powder and sugar.",
                       3.5f,
                        "mocha")
-        var list = ArrayList<Products>()
+        val list = ArrayList<Products>()
         list.add(product)
 
         val adapter = Adapter(requireContext(), list)

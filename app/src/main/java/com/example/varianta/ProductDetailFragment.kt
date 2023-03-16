@@ -17,10 +17,10 @@ class ProductDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var binding = FragmentProductDetailBinding.inflate(layoutInflater, container, false)
+        val binding = FragmentProductDetailBinding.inflate(layoutInflater, container, false)
 
         val bundle : ProductDetailFragmentArgs by navArgs()
-        var product = bundle.product
+        val product = bundle.product
         binding.productName.text = product.name
         binding.imageView2.setImageResource(requireContext()
             .resources.getIdentifier(product.image, "drawable", requireContext().packageName))
